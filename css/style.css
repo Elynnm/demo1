@@ -1,0 +1,15 @@
+.title {
+     color: #ff00ff;
+ }
+.line-box {
+    margin-bottom: 20px;
+}
+.line-box .button {
+    width: 150px;
+    padding : 10px 0;
+    background-color: #0075ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+
+}
