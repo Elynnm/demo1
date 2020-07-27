@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login2</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .login-bg {
+            width: 100%;
+            height: 100%;
+            background-color: #3f2766;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box {
+            width: 500px;
+            height: 500px;
+            background-color: #4d317a;
+            box-shadow: 4px 0 20px #2b1a45;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        .login-title {
+            font-size: 42px;
+            color: #714cab;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .input-box {
+            position: relative;
+        }
+        .input-box input {
+            width: 300px;
+            height: 70px;
+            border-radius: 6px;
+            border: 1px solid #714cab;
+            margin-bottom: 20px;
+            background-color: #4d317a;
+            padding: 0 10px 0 40px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .input-box::before {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .input-box input::placeholder {
+            font-size: 20px;
+            color: #fff;
+        }
+        .input-box input:focus {
+            border-color: #fff;
+        }
+        .login-button {
+            background-color: #714cac;
+            border-style: none;
+            border-radius: 6px;
+            width: 300px;
+            height: 70px;
+            font-size: 24px;
+            color: #2b1a45;
+            font-weight: bold;
+            outline: none;
+        }
+        .login-button:hover {
+            background-color: #653aaa;
+            color: #fff;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-bg">
+        <div class="login-box">
+            <p class="login-title">Authorization</p>
+            <div class="input-box">
+                <input type="text" name="Username" value="" placeholder="Username">
+            </div>
+            <div class="input-box">
+                <input type="password" name="Password" value="" placeholder="Password">
+            </div>
+            <button class="login-button">Submit</button>
+        </div>
+    </div>
+</body>
+</html>

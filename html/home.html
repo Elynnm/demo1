@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            width: 1200px;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .header-left {
+            display: flex;
+        }
+        .header img {
+            margin-right: 20px;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        .nav li {
+            list-style: none;
+            font-size: 18px;
+            margin: 0 25px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #000;
+        }
+        .header-login {
+            display: flex;
+            justify-content: right;
+        }
+        .header-login li {
+            margin: 0 6px;
+            list-style: none;
+        }
+        .header-login a {
+            font-size: 18px;
+            color: #111;
+            text-decoration: none;
+        }
+        .main {
+            width: 100%;
+            background-color: #F7F6FD;
+            display: flex;
+            justify-content: center;
+        }
+        .main-content {
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .main-left {
+            width: 820px;
+            display: flex;
+            background-color: #fff;
+            padding: 20px 0;
+        }
+        .left-nav {
+            list-style: none;
+            width: 111px;
+            text-align: center;
+        }
+        .left-nav li {
+            margin: 10px 0 38px;
+        }
+        .left-nav a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+        }
+        .left-nav li.selected a {
+            display: inline-block;
+            width: 70px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            color: #fff;
+            background: #2C7FE7;
+            border-radius: 3px;
+        }
+        .banner {
+            margin-bottom: 20px;
+        }
+        .news-title {
+            width: 685px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+        .title-left {
+            display: flex;
+            align-items: center;
+        }
+        .title-left img {
+            margin-right: 10px;
+        }
+        .title-left p {
+            font-size: 26px;
+            color: #333;
+        }
+        .news-title button {
+            width: 52px;
+            height: 20px;
+            font-size: 16px;
+            color: #2C7FE7;
+            border: 1px solid #2C7FE7;
+            border-radius: 2px;
+            background-color: transparent;
+        }
+        .left-news .news {
+            display: flex;
+        }
+        .news .photo {
+            margin: 0 20px 20px 0;
+        }
+        .news-content .headline {
+            width: 420px;
+            font-size: 22px;
+            color: #333333;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+        .news-content .details {
+            width: 420px;
+            font-size: 16px;
+            color: #999999;
+            margin-bottom: 20px;
+        }
+        .news-content .timer {
+            font-size: 14px;
+            color: #999999;
+        }
+        .main-right {
+            width: 360px;
+            background-color: #fff;
+            padding: 18px;
+            box-sizing: border-box;
+        }
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sections-item {
+            flex-basis: 50%;
+            margin-bottom: 13px;
+        }
+        .sections-item:nth-child(2n) {
+            padding-left: 9px;
+            box-sizing: border-box;
+        }
+        .hot-articles p {
+            font-size: 26px;
+            color: #333333;
+            margin: 26px 0 24px;
+        }
+        .articles-items {
+            margin-bottom: 16px;
+        }
+        .articles-items li {
+            list-style: none;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+        }
+        .articles-items a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+        }
+        .articles-items span {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .articles-items .stressed {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            background-color: #2C7FE7;
+            border-radius: 2px;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+        }
+        .articles-items .secondary {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #2C7FE7;
+            border-radius: 2px;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            color: #000;
+        }
+        .footer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+         }
+        .footer-content {
+            width: 1200px;
+            padding: 20px 0;
+        }
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+        }
+        .footer-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .footer-nav li {
+            position: relative;
+        }
+        .footer-nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            margin-right: 70px;
+        }
+        .footer-nav li:after {
+            position: absolute;
+            right: 35px;
+            top: 8px;
+            content: "";
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .footer-nav li:last-child:after {
+            content: "";
+            width: 0;
+            height: 0;
+        }
+        .footer-company {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .footer-company .footer-logo {
+            width: 30%;
+            height: 90%;
+            margin-right: 10px;
+        }
+        .footer-company span {
+            color: #333;
+        }
+        .footer-bot {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #cccccc;
+            padding-top: 20px;
+        }
+        .footer-records {
+            display: flex;
+            align-items: center;
+        }
+        .footer-records img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+        .footer-records span {
+            font-size: 14px;
+            color: #333;
+        }
+        .footer-contact {
+            display: flex;
+        }
+        .footer-contact span {
+            font-size: 14px;
+            color: #333333;
+        }
+        .contact-phone {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .contact-phone img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+        .contact-qq {
+            display: flex;
+            align-items: center;
+        }
+        .contact-qq img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="../img/logo.png" alt="">
+            <ul class="nav">
+                <li><a href="">首页</a></li>
+                <li><a href="">应用中心</a></li>
+                <li><a href="">帮助中心</a></li>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">开发者中心</a></li>
+                <li><a href="">资讯</a></li>
+            </ul>
+        </div>
+        <ul class="header-login">
+            <li><a href="">登录</a></li>
+            <li>|</li>
+            <li><a href="">注册</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="main-content">
+            <div class="main-left">
+                <ul class="left-nav">
+                    <li class="selected"><a href="">首页</a></li>
+                    <li class=""><a href="">行情</a></li>
+                    <li><a href="">资讯</a></li>
+                    <li><a href="">综合</a></li>
+                </ul>
+                <div class="left-content">
+                    <div class="banner">
+                        <img src="../img/img_1_001.png" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                    <div class="left-news">
+                        <div class="news-title">
+                            <div class="title-left">
+                                <img src="../img/icon_news_1_001.png" alt="">
+                                <p>最新文章</p>
+                            </div>
+                            <button>more</button>
+                        </div>
+                        <div class="news">
+                            <img class="photo" src="../img/img_2_001.png" alt="">
+                            <div class="news-content">
+                                <p class="headline">光源对话租租车联合创始人李斌：让中国人用自驾的方式丈量世界</p>
+                                <p class="details">凭借坚持下去的毅力和从未泯灭的初心</p>
+                                <p class="timer">10小时前</p>
+                            </div>
+                        </div>
+                        <div class="news">
+                            <img class="photo" src="../img/img_2_002.png" alt="">
+                            <div class="news-content">
+                                <p class="headline">科普短视频，一键加速</p>
+                                <p class="details">理性是战胜恐惧的最好武器</p>
+                                <p class="timer">10小时前</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="sections">
+                    <div class="sections-item">
+                        <img src="../img/img_3_001.png" alt="">
+                    </div>
+                    <div class="sections-item">
+                        <img src="../img/img_3_002.png" alt="">
+                    </div>
+                    <div class="sections-item">
+                        <img src="../img/img_3_003.png" alt="">
+                    </div>
+                    <div class="sections-item">
+                        <img src="../img/img_3_004.png" alt="">
+                    </div>
+                </div>
+                <div class="hot-articles">
+                    <p>热门文章</p>
+                    <ul class="articles-items">
+                        <li ><span class="stressed">1</span><a href="">钟南山院士从患者尿液中分离出病毒钟南山院士从患者尿液中分离出病毒</a></li>
+                        <li><span class="stressed">2</span><a href="">北京加强全国科技创新中心建设2020北京加强全国科技创新中心建设2020</a></li>
+                        <li><span class="stressed">3</span><a href="">朱民：预计疫情影响1-2月中国消费减少50亿市值</a></li>
+                        <li><span class="secondary">4</span><a href="">电子烟绝地求生</a></li>
+                        <li><span class="secondary">5</span><a href="">虚拟的云xx经济越热闹，现实的自己虚拟的云xx经济越热闹，现实的自己</a></li>
+                        <li><span class="secondary">6</span><a href="">大厂神器《顶尖团队出品，质量有保证，品质值得信赖</a></li>
+                        <li><span class="secondary">7</span><a href="">大厂神器《顶尖团队出品，质量有保证，品质值得信赖</a></li>
+                        <li><span class="secondary">8</span><a href="">大厂神器《顶尖团队出品，质量有保证，品质值得信赖</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <ul class="footer-nav">
+                    <li><a href="">首页</a></li>
+                    <li><a href="">应用中心</a></li>
+                    <li><a href="">帮助中心</a></li>
+                    <li><a href="">关于我们</a></li>
+                </ul>
+                <div class="footer-company">
+                    <img class="footer-logo" src="../img/logo.png" alt="">
+                    <span><b>·</b>&nbsp;&nbsp;应用软件中心</span>
+                </div>
+            </div>
+            <div class="footer-bot">
+                <div class="footer-records">
+                    <img src="../img/emblem.png" alt="">
+                    <span>京ICP备11023970号-4</span>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-phone">
+                        <img src="../img/phone.png" alt="">
+                        <span>010-88696063</span>
+                    </div>
+                    <div class="contact-qq">
+                        <img src="../img/qq.png" alt="">
+                        <span>908970042 | 2229897652</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
